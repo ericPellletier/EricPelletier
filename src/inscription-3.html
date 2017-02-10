@@ -1,0 +1,61 @@
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Warma-hordes Réunion</title>
+	
+	<style>
+	label
+	{
+		display:block;
+		font-family: Verdana;
+	}
+	
+	textarea
+	{
+		height: 500px;
+		width: 300px;
+	}
+	
+	</style>
+	
+</head>	
+<body>
+<h1>Warma-Hordes Réunion</h1>
+	<div>
+		<a href="index.html">Menu-Principal</a>
+		<a href="les-articles-de-la-semaine.html">Les articles de la semaine</a>
+		<a href="rejoignez-nous.html">Connectez/Inscrire</a>
+		<a href="le-calendrier-des-evenements.html">Calendrier des évènements</a>
+		<a href="vos-opinions.html">Vos Opinions</a>
+	</div>
+<h2>L'antre du cortex</h2>
+
+<form method="post" action="index.html">
+	<div>
+		<label>Votre armée que vous joué</label>	
+		<select name="test">
+			<option>Khador</option>
+			<option>Cygnar</option>
+			<option>Menoth</option>
+			<option>Cryx</option>	
+			<option>Merco</option>
+		</select>
+	</div>
+	
+	<div>
+		<label for "preference">Quel type de tournoi ou type du jeu préférez vous?</label>
+		<input id="preference" type="radio">steamroll</input>
+		<input id="preference" type="radio">tournoi 3v3</input>
+		<input id="preference" type="radio">domination(le premier caster mort)</input>
+	
+	<div>
+		<label for "description">Présenter vous</label>
+		<textarea id="description" name="description"></textarea>
+	</div>
+
+	<input type="submit"/>
+</form>
+		
+</body>
+
+</html>
