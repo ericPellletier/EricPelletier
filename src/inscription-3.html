@@ -4,23 +4,42 @@
 	<title>Warma-hordes Réunion</title>
 	
 	<style>
-	label
-	{
-		display:block;
-		font-family: Verdana;
-	}
+		{
+			margin:0;
+			padding:0;
+			font-family: Verdana;
+		}
+		label
+		{
+			display:block;
+			font-family: Verdana;
+		}
+		textarea
+		{
+			width:500px;
+			height:300px;
+		}
+		.ajout
+		{
+		
+		}
+		form.ajout
+		{
+		
+		}
+		input [type=text]
+		{
+			width:500px;
+			height:50px;
+		}	
 	
-	textarea
-	{
-		height: 500px;
-		width: 300px;
-	}
 	
 	</style>
 	
 </head>	
 <body>
-<h1>Warma-Hordes Réunion</h1>
+<div style="width:100%; height:36%; background-color:0099FF;">
+	<h1>Warma-Hordes Réunion</h1>
 	<div>
 		<a href="index.html">Menu-Principal</a>
 		<a href="les-articles-de-la-semaine.html">Les articles de la semaine</a>
@@ -28,7 +47,8 @@
 		<a href="le-calendrier-des-evenements.html">Calendrier des évènements</a>
 		<a href="vos-opinions.html">Vos Opinions</a>
 	</div>
-<h2>L'antre du cortex</h2>
+</div>	
+<h2>Joignez nous page trois</h2>
 
 <form method="post" action="index.html">
 	<div>
@@ -44,9 +64,10 @@
 	
 	<div>
 		<label for "preference">Quel type de tournoi ou type du jeu préférez vous?</label>
-		<input id="preference" type="radio">steamroll</input>
-		<input id="preference" type="radio">tournoi 3v3</input>
-		<input id="preference" type="radio">domination(le premier caster mort)</input>
+		<input type="radio" checked name="R1" value="V1">steamroll</input>
+		<input type="radio" checked name="R1" value="V1">tournoi 3v3</input>
+		<input type="radio" checked name="R1" value="V1">domination(le premier caster mort)</input>
+		
 	
 	<div>
 		<label for "description">Présenter vous</label>
