@@ -2,8 +2,66 @@
 <head>
 	<meta charset="utf-8">
 	<title>Warma-hordes Réunion</title>
+	<script>
 	
+	function validerFormulaireContact()
+	{
+		//affiche un message de validation
+		//alert('valider');
+		
+		var champsAdresse = document.getElementById("adresse");
+			//alert(champsAdresse);
+		
+		if(! champsAdresse.value.match("^http"))
+		{
+			var cibleMessage = document.getElementById("message");
+			
+			cibleMessage.innerHTML ="votre courriel est invalide";
+			cibleMessage.style.display = "block";
+			return false;
+		}
+		
+		
+		
+		
+	}
+	
+	</script>
 	<style>
+	
+		*
+		{
+		    padding: 5 px;
+			margin: 5 px;
+			text-decoration:none;
+			font-family:Verdana;
+		}
+		#menu li a			
+		{
+			border-left:solide 3px #white;
+			background-color:161719;
+		}
+		#menu li a:hover
+		{
+			color:red;
+		}
+		
+		#menu li a.active
+		{
+			color:red;
+		}
+		
+		#menu li after
+		{
+			
+		}
+		#message
+		{
+			display:none;
+			border: solid 3px red;
+			background-color:pink;
+		}
+		
 		{
 			margin:0;
 			padding:0;
@@ -19,14 +77,19 @@
 			width:500px;
 			height:300px;
 		}
-		.ajout
+		a
 		{
-		
+			font-siz:20px;
+			font-family: Verdana;
+			color:orange;
+			text-decoration:none;
 		}
-		form.ajout
+		
+		a:visited
 		{
-		
+			color:gray;
 		}
+		
 		input [type=text]
 		{
 			width:500px;
@@ -37,48 +100,52 @@
 	</style>
 	
 </head>	
-<body>
-<div style="width:100%; height:36%; background-color:0099FF;">
-	<h1>Warma-Hordes Réunion page test</h1>
-	<div>
-		<a href="index.html">Menu-Principal</a>
-		<a href="les-articles-de-la-semaine.html">Les articles de la semaine</a>
-		<a href="rejoignez-nous.html">Connectez/Inscrire</a>
-		<a href="le-calendrier-des-evenements.html">Calendrier des évènements</a>
-		<a href="vos-opinions.html">Vos Opinions</a>
-	</div>
-</div>	
+<body> 
 
-<div style="width:100%; height:90%; background-color:#848484;">
-	<h2>Vos Opinions</h2>
-
-	<form>
-	
-	</form>
-	
-	<form>
-
-		<div>
-			<label for="nom">Votre nom</label>		
-			<input id="nom" type="text" name="nom" />
-		</div>
+	<div style="width:100%; height:36%; background-color:0099FF;">
+		<h1>Warma-Hordes Réunion page test</h1>
 		
-		<div>
-			<label for="adresse">Votre adresse e-mail</label>
-			<input id="adresse" type="text" name="adresse" />
-		</div>
-		<div>
-			<label for="age">Votre age</label>
-			<input id="age" type="text" name="age" />
-		<div>
-			<label for="commentaire">Votre commentaire</label>			
-			<textarea id="commentaire"></textarea>
-		</div>
+			<ul id="menu">
+				
+				<li><a class="active" href="test-page.html">Menu-Principal</a></li>
+				<li><a href="les-articles-de-la-semaine.html">Les articles de la semaine</a></li>
+				<li><a href="rejoignez-nous.html">Connectez/Inscrire</a></li>
+				<li><a href="le-calendrier-des-evenements.html">Calendrier des évènements</a></li>
+				<li><a href="vos-opinions.html">Vos Opinions</a></li>
+				
+			</ul>
+	</div>	
 
-		<input type="submit"/>
-	
-	</form>
-</div>	
+	<div style="width:100%; height:90%; background-color:#848484;">
+		<h2>Vos Opinions</h2>
+
+		<div id="message"></div>
+		
+		<form onsubmit="return validerFormulaireContact()" method="post">
+
+			<div>
+				<label for="nom">Votre nom</label>		
+				<input id="nom" type="text" name="nom" />
+			</div>
+			
+			<div>
+				<label for="adresse">Votre adresse e-mail</label>
+				<input id="adresse" type="text" name="adresse" />
+			</div>
+			
+			<div>
+				<label for="age">Votre age</label>
+				<input id="age" type="text" name="age" />
+			</div>
+			<div>
+				<label for="commentaire">Votre commentaire</label>			
+				<textarea id="commentaire"></textarea>
+			</div>
+
+			<input type="submit" value="merci bonsoir"/>
+		
+		</form>
+	</div>	
 </body>
 
 </html>
