@@ -2,9 +2,76 @@
 <head>
 	<meta charset="utf-8">
 	<title>Warma-hordes Réunion</title>
+	<script>
 	
+	function validerFormulaireContact()
+	{
+		//affiche un message de validation
+		//alert('valider');
+		
+		var champsAdresse = document.getElementById("adresse");
+			//alert(champsAdresse);
+		
+		if(! champsAdresse.value.match("^http"))
+		{
+			var cibleMessage = document.getElementById("message");
+			
+			cibleMessage.innerHTML ="votre courriel est invalide";
+			cibleMessage.style.display = "block";
+			return false;
+		}
+		
+		
+		
+		
+	}
+	
+	</script>
 	<style>
-	label
+	
+		*
+		{
+		    padding: 9 px;
+			margin: 5 px;
+			text-decoration:none;
+			font-family:Verdana;
+		}
+		#menu li a			
+		{
+			border-left:solide 3px #white;
+			background-color:161719;
+		}
+		#menu li a:hover
+		{
+			color:red;
+		}
+		
+		#menu li a.active
+		{
+			color:red;
+		}
+		
+		#menu li after
+		{
+			
+		}
+		#message
+		{
+			display:none;
+			border: solid 3px red;
+			background-color:pink;
+		}
+		h1
+		{
+			
+			font-size: 60px;
+		}
+		h2
+		{
+			font-size: 30px;
+			
+		}
+		
 		{
 			margin:0;
 			padding:0;
@@ -20,37 +87,54 @@
 			width:500px;
 			height:300px;
 		}
-		.ajout
+		p
 		{
-		
+			font-family: constantine;
+			font-size:20px;
 		}
-		form.ajout
+		a
 		{
-		
+			font-size:20px;
+			font-family: Verdana;
+			color:gray;
+			text-decoration:none;
 		}
+		
+		a:visited
+		{
+			color:C54444;
+		}
+		
 		input [type=text]
 		{
 			width:500px;
 			height:50px;
 		}	
+		
 	
 	
 	</style>
-	
 </head>	
 <body>
-<div style="width:100%; height:36%; background-color:0099FF;">
-	<h1>Warma-Hordes Réunion</h1>
-	<div>
-		<a href="index.html">Menu-Principal</a>
-		<a href="les-articles-de-la-semaine.html">Les articles de la semaine</a>
-		<a href="rejoignez-nous.html">Connectez/Inscrire</a>
-		<a href="le-calendrier-des-evenements.html">Calendrier des évènements</a>
-		<a href="vos-opinions.html">Vos Opinions</a>
+	<div style="width:100%; height:36%; background-color:0099FF;">
+		<h1><center>Warma-Hordes Réunion</center></h1>
+		
+			<ul id="menu">
+				
+				<li><a href="index.html">Menu-Principal</a></li>
+				<li><a class="active" href="les-articles-de-la-semaine.html">Les articles de la semaine</a></li>
+				<li><a href="rejoignez-nous.html">Connectez/Inscrire</a></li>
+				<li><a href="le-calendrier-des-evenements.html">Calendrier des évènements</a></li>
+				<li><a href="vos-opinions.html">Vos Opinions</a></li>
+				
+			</ul>
+	</div>	
+	<div style="width:100%; height:90%; background-color:#848484;">
+	<h2><center>Les Articles De La Semaine</center></h2>
+	<h3>Le vieux pappy se fait une beauté</h3>
+	<h3></h3>
+	<h3>Les plus gros ne sont pas forcément les plus forts</h3>
 	</div>
-</div>	
-<h2>Les Articles De La Semaine</h2>
-	
 </body>
 
 </html>
