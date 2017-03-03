@@ -3,28 +3,7 @@
 	<meta charset="utf-8">
 	<title>Warma-hordes Réunion</title>
 	<script>
-	
-	function validerFormulaireContact()
-	{
-		//affiche un message de validation
-		//alert('valider');
-		
-		var champsAdresse = document.getElementById("adresse");
-			//alert(champsAdresse);
-		
-		if(! champsAdresse.value.match("^http"))
-		{
-			var cibleMessage = document.getElementById("message");
-			
-			cibleMessage.innerHTML ="votre courriel est invalide";
-			cibleMessage.style.display = "block";
-			return false;
-		}
-		
-		
-		
-		
-	}
+
 	
 	</script>
 	<style>
@@ -38,8 +17,8 @@
 		}
 		#menu li a			
 		{
-			border-left:solide 3px #white;
-			background-color:161719;
+			border-left:solide 3px #orange;
+			background-color:#161719;
 		}
 		#menu li a:hover
 		{
@@ -51,16 +30,7 @@
 			color:red;
 		}
 		
-		#menu li after
-		{
-			
-		}
-		#message
-		{
-			display:none;
-			border: solid 3px red;
-			background-color:pink;
-		}
+
 		h1
 		{
 			
@@ -82,21 +52,12 @@
 			display:block;
 			font-family: Verdana;
 		}
-		textarea
-		{
-			width:500px;
-			height:300px;
-		}
-		p
-		{
-			font-family: constantine;
-			font-size:20px;
-		}
+
 		a
 		{
 			font-size:20px;
 			font-family: Verdana;
-			color:gray;
+			color:C54444;
 			text-decoration:none;
 		}
 		
@@ -109,14 +70,37 @@
 		{
 			width:500px;
 			height:50px;
-		}	
-		
-	
+		}
+		#tetepage
+		{
+			width:100%; 
+			height:45%; 
+			background-color:0099FF;
+		}
+		#baspage
+		{
+			width:100%;
+			height:90%;
+			background-color:#848484;
+		}		
+		#article:hover
+		{
+			color:red;
+		}
+		#article
+		{
+			font-size:20px;
+			width:500px;
+			height:100px;
+			display:block;
+			color:C54444;
+			background-color:black;
+		}
 	
 	</style>
 </head>	
 <body>
-	<div style="width:100%; height:36%; background-color:0099FF;">
+	<div id="tetepage">
 		<h1><center>Warma-Hordes Réunion</center></h1>
 		
 			<ul id="menu">
@@ -129,11 +113,13 @@
 				
 			</ul>
 	</div>	
-	<div style="width:100%; height:90%; background-color:#848484;">
+	<div id="baspage">
 	<h2><center>Les Articles De La Semaine</center></h2>
-	<h3>Le vieux pappy se fait une beauté</h3>
-	<h3></h3>
-	<h3>Les plus gros ne sont pas forcément les plus forts</h3>
+	<div>
+	<a id="article" href="article-premier.html">Le vieux pappy se fait une beauté</a>
+	<a id="article" href="article-deuxieme.html">Le combat de la semaine</a>
+	<a id="article" href="article-troisieme.html">Les plus gros ne sont pas forcément les plus forts</a>
+	</div>
 	</div>
 </body>
 

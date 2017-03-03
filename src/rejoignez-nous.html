@@ -4,19 +4,33 @@
 	<title>Warma-hordes Réunion</title>
 	<script>
 	
+	function validerLePasse()
+	{
+		var champsPasse = document.getElementById("motDePasse");
+		
+		if(!champsPasse.value.match("grosjambon123"))
+		{
+			var cibleMessage = document.getElementById("message");
+			
+			cibleMessage.innerHTML ="votre adresse ou/et votre mot de passe est invalide";
+			cibleMessage.style.display = "block";
+			return false;
+		}
+	}
+	
 	function validerFormulaireContact()
 	{
 		//affiche un message de validation
 		//alert('valider');
 		
-		var champsAdresse = document.getElementById("adresse");
+		var champsAdresse = document.getElementById("nomDacompte");
 			//alert(champsAdresse);
 		
-		if(! champsAdresse.value.match("^http"))
+		if(! champsAdresse.value.match("Moi123"))
 		{
 			var cibleMessage = document.getElementById("message");
 			
-			cibleMessage.innerHTML ="votre courriel est invalide";
+			cibleMessage.innerHTML ="votre adresse ou/et votre mot de passe est invalide";
 			cibleMessage.style.display = "block";
 			return false;
 		}
@@ -35,6 +49,7 @@
 			margin: 5 px;
 			text-decoration:none;
 			font-family:Verdana;
+			
 		}
 		#menu li a			
 		{
@@ -76,16 +91,8 @@
 			display:block;
 			font-family: Verdana;
 		}
-		textarea
-		{
-			width:500px;
-			height:300px;
-		}
-		p
-		{
-			font-family: constantine;
-			font-size:20px;
-		}
+
+
 		a
 		{
 			font-size:20px;
@@ -102,6 +109,18 @@
 		{
 			font-size: 60px;
 		}
+		#tetepage
+		{
+			width:100%; 
+			height:45%; 
+			background-color:0099FF;
+		}
+		#baspage
+		{
+			width:100%;
+			height:90%;
+			background-color:#848484;
+		}
 		input [type=text]
 		{
 			width:500px;
@@ -113,7 +132,7 @@
 	</style>
 </head>	
 <body>
-	<div style="width:100%; height:36%; background-color:0099FF;">
+	<div id="tetepage" >
 		<h1><center>Warma-Hordes Réunion</center></h1>
 		
 			<ul id="menu">
@@ -126,20 +145,23 @@
 				
 			</ul>
 	</div>	
-	<div style="width:100%; height:90%; background-color:#848484;">
+	<div id="baspage">
 	<h2><center>Vous connectez</center></h2>
 
-
-	<form method="form" action="index.html">
-	<div>
-	<label>Nom du compte</label>
-	<input id="nomDacompte" type="text" name="nomDacompte" />
-	</div>
-	<div>
-	<label>Mot de Passe</label>
-	<input id="motDePasse" type="text" name="motDePasse" />
-	</div>
-	<input type="submit" value="connection"/>
+	<div id="message"></div>
+	
+	<form onsubmit="return validerFormulaireContact()" onsubmit="validerLePasse()" method="post">
+		<div>
+			<label>Nom du compte</label>
+			<input id="nomDacompte" type="text" name="nomDacompte" />
+		</div>
+		
+		<div>
+			<label>Mot de Passe</label>
+			<input id="motDePasse" type="password" name="motDePasse" />
+		</div>
+		
+		<input type="submit" value="connection"/>
 	</form>
 
 	<h2>Vous inscrire</h2>
