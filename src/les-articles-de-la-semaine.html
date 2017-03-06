@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<title>Warma-hordes Réunion</title>
 	<script>
-
+	
 	
 	</script>
 	<style>
@@ -80,20 +80,25 @@
 		#baspage
 		{
 			width:100%;
-			height:90%;
-			background-color:#848484;
+			height:90%;		
+			background-image:url("décoration/ImageDefont.jpg");
+			
+			
 		}		
 		#article:hover
 		{
-			color:red;
+			color:gray;
+			background-color:gray;
+			cibleMessage.innerHTML ="votre courriel est invalide";
+			
 		}
 		#article
 		{
-			font-size:20px;
+			font-size:30px;
 			width:500px;
 			height:100px;
 			display:block;
-			color:C54444;
+			color:0099FF;
 			background-color:black;
 		}
 	
@@ -116,9 +121,9 @@
 	<div id="baspage">
 	<h2><center>Les Articles De La Semaine</center></h2>
 	<div>
-	<a id="article" href="article-premier.html">Le vieux pappy se fait une beauté</a>
-	<a id="article" href="article-deuxieme.html">Le combat de la semaine</a>
-	<a id="article" href="article-troisieme.html">Les plus gros ne sont pas forcément les plus forts</a>
+		<div><a id="article" href="article-premier.html">Le vieux pappy se fait une beauté</a></div>
+		<div><a id="article" href="article-deuxieme.html">Le combat de la semaine</a></div>
+		<div><a id="article" href="article-troisieme.html">Les plus gros ne sont pas forcément les plus forts</a></div>
 	</div>
 	</div>
 </body>
