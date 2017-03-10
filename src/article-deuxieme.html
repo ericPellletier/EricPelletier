@@ -3,28 +3,15 @@
 	<meta charset="utf-8">
 	<title>Warma-hordes Réunion</title>
 	<script>
-	
-	function validerFormulaireContact()
-	{
-		//affiche un message de validation
-		//alert('valider');
-		
-		var champsAdresse = document.getElementById("adresse");
-			//alert(champsAdresse);
-		
-		if(! champsAdresse.value.match("^http"))
-		{
-			var cibleMessage = document.getElementById("message");
-			
-			cibleMessage.innerHTML ="votre courriel est invalide";
-			cibleMessage.style.display = "block";
-			return false;
-		}
-		
-		
-		
-		
-	}
+	 $("#image").fancybox({
+			openEffect : 'none',
+			closeEffect	: 'none',
+			helpers : {
+				title : {
+					type : 'outside'
+				}
+			}
+		});
 	
 	</script>
 	<style>
@@ -49,29 +36,22 @@
 		#menu li a.active
 		{
 			color:red;
-		}
-		
+		}	
 
-		h2
-		{
-			font-size: 30px;
-		}
-		
-		{
-			margin:0;
-			padding:0;
-			font-family: Verdana;
-		}
 		label
 		{
 			display:block;
 			font-family: Verdana;
 		}
 
-		p
+		#article p
 		{
-			font-family: constantine;
-			font-size:20px;
+			position:absolute;
+			left: 620px;
+			color:black;
+			
+			font-size:14px;
+			display:block;
 		}
 		a
 		{
@@ -82,7 +62,23 @@
 		}
 		h1
 		{
+			background-color:gray;
+			text-align: center;
 			font-size:60px;
+		}
+		h2
+		{
+			text-align: center;
+			margin: auto;
+			color:#0A0A2A;	
+			font-size: 30px;
+		}
+		h3
+		{
+			display:block;
+			font-size:20px;
+			text-align:center;
+			color:black;
 		}
 		a:visited
 		{
@@ -97,25 +93,46 @@
 		
 		#tetepage
 		{
+			border-radius: 10px;
 			width:100%; 
 			height:45%; 
 			background-color:0099FF;
 		}
 		#baspage
 		{
+			border-radius: 10px;
 			width:100%;
-			height:90%;
-			background-color:#848484;
-			background-image:décoration/ImageDefont.jpg;
+			height:auto;
+			background-image:url("décoration/ImageDefont.jpg");
+		
 		}
-	
-	
+
+		#article
+		{
+			border-radius: 10px;
+			border:solid 5px black;
+			position:relative;
+			
+			margin-bottom:10px;
+			font-size:30px;
+			width:1000px;
+			height:420px;
+			color:0099FF;
+			background-color:gray;
+			
+		}
+		#article img
+		{
+			top:30px;
+			left:6px;
+			position:absolute;
+		}
 	
 	</style>
 </head>	
 <body>
 	<div id="tetepage">
-		<h1><center>Warma-Hordes Réunion</center></h1>
+		<h1>Warma-Hordes Réunion</h1>
 		
 			<ul id="menu">
 				
@@ -128,8 +145,37 @@
 			</ul>
 	</div>	
 	<div id="baspage">
-	<h2><center>Les Articles De La Semaine</center></h2>
+	
+		<h2>Le combat de la semaine</h2>
+		<h3>Éric(Cygnar) contre Philippe(Cryx)</h3>
+		<div id="article">
+				
+				<a id="image" href="illustration/premierronde.jpg" title="Premier Ronde">
+				<img src="illustration/petitpremierronde.jpg" alt="" />
+				</a>
+				<p>La partie a commencé par un déplacement rapide sur les deux côtés du terrain de bataille.
+				Sachant que les objectifs n'ont pas été misent(notre erreur oups :p) et vu que nous n'avions pas beaucoup d'attaque à distance
+				nous nous sommes presé vers les points de controles.</p>
+		</div>
+		<div id="article">
+				
+				<a id="image" href="illustration/deuxiemetour.jpg" title="Deuxième tour">
+				<img src="illustration/petitdeuxiemetour.jpg" alt="" />
+				</a>
+				<p>Le deuxième ronde a été beaucoup plus monvementé. avec la venu des bane tralls de Philippe, Éric n'a eu aucune chance de "free strike" quand les undeads sont passé en arrière ligne de Éric. L'ironClad n'a pu résisté 
+				contre la visite de la Lich qui est ensuite se réfugier au point de controle qui lui valuera son premier point du match. Éric, à son tour de jeu, a pu faire disparaitre la moitié de l'unité de Phil et se repositionné pour 
+				formé sa défense</p>
+		</div>
+		<div id="article">
+				<a id="image" href="illustration/finaltour.jpg" title="Dernier Tour">
+				<img src="illustration/petitfinaltour.jpg" alt="" />
+				</a>
+				<p></p>
+		</div>
+	
 	</div>
+
+
 </body>
 
 </html>

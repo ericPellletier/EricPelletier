@@ -10,6 +10,7 @@
 	
 		*
 		{
+			
 		    padding: 9 px;
 			margin: 5 px;
 			text-decoration:none;
@@ -33,15 +34,19 @@
 
 		h1
 		{
-			
+			text-align: center;
 			font-size: 60px;
 		}
 		h2
 		{
-			font-size: 30px;
-			
+			text-align: center;
+			font-size: 36px;
+			color:black;			
 		}
-		
+		h3
+		{
+			font-size:18;
+		}
 		{
 			margin:0;
 			padding:0;
@@ -73,6 +78,7 @@
 		}
 		#tetepage
 		{
+			border-radius: 10px;
 			width:100%; 
 			height:45%; 
 			background-color:0099FF;
@@ -80,33 +86,45 @@
 		#baspage
 		{
 			width:100%;
-			height:90%;		
+			height:auto;		
 			background-image:url("décoration/ImageDefont.jpg");
-			
+			border-radius: 10px;
 			
 		}		
-		#article:hover
+
+		p
 		{
-			color:gray;
-			background-color:gray;
-			cibleMessage.innerHTML ="votre courriel est invalide";
-			
+			font-style:center;
+			font-size:14px;
+			display:block;
 		}
+		#suivant
+		{
+			color:red;
+			font-size:14px;
+			display:block;
+		}
+
+		
 		#article
 		{
+			border:solid 5px black;
+			border-radius: 10px;
+			margin-bottom:10px;
 			font-size:30px;
 			width:500px;
-			height:100px;
+			height:200px;
 			display:block;
-			color:0099FF;
-			background-color:black;
+			color:black;
+			background-color:gray;
+			
 		}
 	
 	</style>
 </head>	
 <body>
 	<div id="tetepage">
-		<h1><center>Warma-Hordes Réunion</center></h1>
+		<h1>Warma-Hordes Réunion</h1>
 		
 			<ul id="menu">
 				
@@ -119,11 +137,25 @@
 			</ul>
 	</div>	
 	<div id="baspage">
-	<h2><center>Les Articles De La Semaine</center></h2>
+	<h2>Les Articles De La Semaine</h2>
 	<div>
-		<div><a id="article" href="article-premier.html">Le vieux pappy se fait une beauté</a></div>
-		<div><a id="article" href="article-deuxieme.html">Le combat de la semaine</a></div>
-		<div><a id="article" href="article-troisieme.html">Les plus gros ne sont pas forcément les plus forts</a></div>
+		<div  id="article">
+			<h3>Le vieux pappy se fait une beauté</h3>
+			<p>De nouvelles stratégie pour les fanatique du vieux papy du tonnerre.<a id="suivant"href="article-premier.html">Pour en savoir plus</a></p>
+			
+		</div>
+		
+		<div  id="article">
+			<h3>Le combat de la semaine, Cygnar vs Cryx</h3>
+			<p>Le report de bataille de cette semaine est celui de Éric(Darius) contre Philippe(Asphixious)<a id="suivant"href="article-deuxieme.html">Pour en savoir plus</a></p>
+			
+		</div>
+		
+		<div id="article">
+			<h3>Les plus gros ne sont pas forcément les plus forts</h3>
+			<p>Une revue sur les différents type d'unité et démistifier si vraiment les grands sont toujours les plus forts.<a id="suivant"href="article-troisieme.html">Pour en savoir plus</a></p>
+			
+		</div>
 	</div>
 	</div>
 </body>
