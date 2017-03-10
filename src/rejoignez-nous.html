@@ -76,11 +76,7 @@
 			border: solid 3px red;
 			background-color:pink;
 		}
-		h2
-		{
-			font-size: 30px;
-		}
-		
+
 		{
 			margin:0;
 			padding:0;
@@ -90,8 +86,10 @@
 		{
 			display:block;
 			font-family: Verdana;
+			font-weight: 600;
+			color:white;
 		}
-
+		
 
 		a
 		{
@@ -107,10 +105,28 @@
 		}
 		h1
 		{
-			font-size: 60px;
+			background-color:gray;
+			text-align: center;
+			font-size:60px;
+		}
+		h2
+		{
+			text-align: center;
+			margin: auto;
+			color:white;
+			border-radius: 10px;			
+			font-size: 30px;
+		}
+		h3
+		{
+			display:block;
+			font-size:20px;
+			text-align:center;
+			color:black;
 		}
 		#tetepage
 		{
+			border-radius: 10px;
 			width:100%; 
 			height:45%; 
 			background-color:0099FF;
@@ -118,22 +134,35 @@
 		#baspage
 		{
 			width:100%;
-			height:90%;
-			background-color:#848484;
+			height:55%;
+			border-radius: 10px;
+			background-image:url("décoration/ImageDefont.jpg");
+			
+		}
+		input
+		{
+			font-weight:600;
+			background-color:black;
+			color:white;
 		}
 		input [type=text]
 		{
+			
 			width:500px;
 			height:50px;
 		}	
-		
+		#inscription
+		{
+			
+			text-align:center;
+		}
 	
 	
 	</style>
 </head>	
 <body>
 	<div id="tetepage" >
-		<h1><center>Warma-Hordes Réunion</center></h1>
+		<h1>Warma-Hordes Réunion</h1>
 		
 			<ul id="menu">
 				
@@ -146,29 +175,32 @@
 			</ul>
 	</div>	
 	<div id="baspage">
-	<h2><center>Vous connectez</center></h2>
+	<h2>Vous connectez</h2>
 
-	<div id="message"></div>
 	
-	<form onsubmit="return validerFormulaireContact()" onsubmit="validerLePasse()" method="post">
-		<div>
-			<label>Nom du compte</label>
-			<input id="nomDacompte" type="text" name="nomDacompte" />
-		</div>
-		
-		<div>
-			<label>Mot de Passe</label>
-			<input id="motDePasse" type="password" name="motDePasse" />
-		</div>
-		
-		<input type="submit" value="connection"/>
-	</form>
-
-	<h2>Vous inscrire</h2>
-
-	<form method="form" action="inscription.html">
-	<input type="submit" value="commencer"/>
-	</form>
+	<div id="inscription">
+		<div id="message"></div>
+		<form onsubmit="return validerFormulaireContact()" onsubmit="validerLePasse()" method="post">
+			<div>
+				<label>Nom du compte</label>
+				<input id="nomDacompte" type="text" name="nomDacompte" />
+			</div>
+			
+			<div>
+				<label>Mot de Passe</label>
+				<input id="motDePasse" type="password" name="motDePasse" />
+			</div>
+			
+			<input type="submit" value="connection"/>
+		</form>
+	</div>
+	
+	<div id="inscription">
+		<h2>Vous inscrire</h2>
+		<form method="form" action="inscription.html">
+		<input type="submit" value="commencer"/>
+		</form>
+	</div>
 	</div>
 	
 </body>

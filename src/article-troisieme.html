@@ -26,37 +26,7 @@
 		{
 			color:red;
 		}
-		
-		#menu li after
-		{
-			
-		}
-		#message
-		{
-			display:none;
-			border: solid 3px red;
-			background-color:pink;
-		}
-		h2
-		{
-			font-size: 30px;
-		}
-		
-		{
-			margin:0;
-			padding:0;
-			font-family: Verdana;
-		}
-		label
-		{
-			display:block;
-			font-family: Verdana;
-		}
-		textarea
-		{
-			width:500px;
-			height:300px;
-		}
+
 		p
 		{
 			font-family: constantine;
@@ -66,31 +36,75 @@
 		{
 			font-size:20px;
 			font-family: Verdana;
-			color:orange;
+			color:C54444;
 			text-decoration:none;
 		}
-		
+		#article
+		{
+			border-radius: 10px;
+			border:solid 5px black;
+			position:relative;
+			
+			margin-bottom:10px;
+			font-size:30px;
+			width:1000px;
+			height:420px;
+			color:0099FF;
+			background-color:gray;
+			
+		}
 		a:visited
 		{
-			color:gray;
+			color:C54444;
 		}
 		h1
 		{
+			text-align:center;
 			font-size:60px;
+		}
+				
+		h2
+		{
+			text-align:center;
+			font-size: 30px;
+		}
+		h3
+		{
+			display:block;
+			font-size:20px;
+			text-align:center;
+			color:white;
 		}
 		input [type=text]
 		{
 			width:500px;
 			height:50px;
 		}	
+		#tetepage
+		{
+			border-radius: 10px;
+			width:100%; 
+			height:45%; 
+			background-color:0099FF;
+		}
+		#baspage
+		{
+			border-radius: 10px;
+			width:100%;
+			height:auto;
+			padding-bottom: 10px;
+			padding-left:10px;
+			
+			background-image:url("décoration/ImageDefont.jpg");
 		
+		}
 	
 	
 	</style>
 </head>	
 <body>
-	<div style="width:100%; height:36%; background-color:0099FF;">
-		<h1><center>Warma-Hordes Réunion</center></h1>
+	<div id="tetepage">
+		<h1>Warma-Hordes Réunion</h1>
 		
 			<ul id="menu">
 				
@@ -102,10 +116,12 @@
 				
 			</ul>
 	</div>	
-	<div style="width:100%; height:90%; background-color:#848484;">
-	
-	<h2><center>Les Articles De La Semaine</center></h2>
-	<h3><center>Les plus gros ne sont pas forcément les plus forts</center></h3>
+	<div id="baspage">
+		<h2>Les Articles De La Semaine</h2>
+		<div id="article">
+		
+			<h3>Les plus gros ne sont pas forcément les plus forts</h3>
+		</div>
 	</div>
 </body>
 
